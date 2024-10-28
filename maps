@@ -1,0 +1,11 @@
+Cafe
+<map name="cafe-map">
+      <area target="" alt="garden" title="garden" href="" coords="610,472,609,124,0,102,-1,492,27,646" shape="poly">
+      <area target="" alt="table" title="table" href="" coords="1020,863,1027,757,1234,573,1414,599,1414,668,1273,923" shape="poly">
+      <area target="" alt="counter" title="counter" href="" coords="1409,508,1695,538,1689,616,1374,576" shape="poly">
+  </map>
+
+  Base
+  <map name="base-map">
+    <area target="" alt="kitchen" title="kitchen" href="" coords="1191,701,1141,712,898,551,826,539,833,465,1024,434,1114,473,1110,553,1217,611" shape="poly">
+</map>
