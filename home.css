@@ -1,0 +1,90 @@
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+nav {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  
+
+a {
+    color: white;
+    cursor: pointer;
+}
+
+a :hover {
+    transition: 0.3s;
+    color: rgb(184, 184, 184);
+}
+
+.ting {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(133, 76, 76);
+    height: 92vh;
+}
+
+.wrapper {
+width: 80%;
+max-width: 1100px;
+}
+
+.rowContainer {
+  display: flex;
+  gap: 5em;
+  margin-right: 8%;
+  margin-left: 3%;
+
+  button {
+    cursor: pointer;
+    flex-grow: 1;
+  }
+}
+
+#themebutton {
+  background-color: transparent;
+  border: none;
+  height: 10em;
+  width: 10em;
+  margin: -30px;
+  justify-self: flex-start;
+}
+
+#themebutton img {
+  width: 100%;
+  height: 100%;
+  transition: transform.4s;
+  margin: -30px;
+}
+
+#themebutton img:hover {
+  transform: scale(1.13);
+}
+
+#themebutton:active {
+  transform: translateY(4px);
+}
+
+#darkbackground {
+  background: url(UI/bg1.png);
+}
+
+#lightbackground {
+  background-color: rgb(236, 236, 236);
+}

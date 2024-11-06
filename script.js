@@ -34,22 +34,19 @@ function changeTheme() {
     audio.play();
   }
 
-  curr = document.querySelector("body");
-  let currTheme = document.querySelector("#darkbackground");
-  let currBox = document.querySelector("#darksquare");
-  let navButtons = document.getElementsByClassName("navButton");
+  const currTheme = document.querySelector("#darkbackground") || document.querySelector("#lightbackground");
+  const currBox = document.querySelector("#darksquare") || document.querySelector("#lightsquare");
+  const navButtons = document.getElementsByClassName("navButton");
 
-  if (curr.id == "darkbackground") {
+  // Check if the current theme is dark or light and toggle
+  if (currTheme && currTheme.id === "darkbackground") {
     currTheme.id = "lightbackground";
     currBox.id = "lightsquare";
 
     for (let navButton of navButtons) {
       navButton.style.border = "3px solid black";
     }
-  } else {
-    let currTheme = document.querySelector("#lightbackground");
-    let currBox = document.querySelector("#lightsquare");
-
+  } else if (currTheme && currTheme.id === "lightbackground") {
     currTheme.id = "darkbackground";
     currBox.id = "darksquare";
 
@@ -136,17 +133,19 @@ document.getElementById("skyMap").addEventListener("click", function (event) {
   event.stopPropagation();
 });
 
-document.getElementById("gardenMap").addEventListener("click", function (event) {
-  event.preventDefault();
+document
+  .getElementById("gardenMap")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
 
-  const card = document.getElementById("gardenCard");
+    const card = document.getElementById("gardenCard");
 
-  if (card) {
-    card.style.display = "grid";
-  }
+    if (card) {
+      card.style.display = "grid";
+    }
 
-  event.stopPropagation();
-});
+    event.stopPropagation();
+  });
 
 document.getElementById("tableMap").addEventListener("click", function (event) {
   event.preventDefault();
@@ -160,29 +159,33 @@ document.getElementById("tableMap").addEventListener("click", function (event) {
   event.stopPropagation();
 });
 
-document.getElementById("counterMap").addEventListener("click", function (event) {
-  event.preventDefault();
+document
+  .getElementById("counterMap")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
 
-  const card = document.getElementById("counterCard");
+    const card = document.getElementById("counterCard");
 
-  if (card) {
-    card.style.display = "grid";
-  }
+    if (card) {
+      card.style.display = "grid";
+    }
 
-  event.stopPropagation();
-});
+    event.stopPropagation();
+  });
 
-document.getElementById("kitchenMap").addEventListener("click", function (event) {
-  event.preventDefault();
+document
+  .getElementById("kitchenMap")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
 
-  const card = document.getElementById("kitchenCard");
+    const card = document.getElementById("kitchenCard");
 
-  if (card) {
-    card.style.display = "grid";
-  }
+    if (card) {
+      card.style.display = "grid";
+    }
 
-  event.stopPropagation();
-});
+    event.stopPropagation();
+  });
 
 document.addEventListener("click", function (e) {
   book = document.getElementById("bookCard");
@@ -206,26 +209,24 @@ document.addEventListener("click", function (e) {
       wall.style.display = "none";
     }
   }
-  
-  if(garden && table && counter) {
-  if (e.target != garden) {
-    garden.style.display = "none";
-  }
 
-  if (e.target != table) {
-    table.style.display = "none";
-  }
+  if (garden && table && counter) {
+    if (e.target != garden) {
+      garden.style.display = "none";
+    }
 
-  if (e.target != counter) {
-    counter.style.display = "none";
+    if (e.target != table) {
+      table.style.display = "none";
+    }
+
+    if (e.target != counter) {
+      counter.style.display = "none";
+    }
   }
-}
 
   if (kitchen) {
-    if (e.target != kitchen)
-      kitchen.style.display = "none";
+    if (e.target != kitchen) kitchen.style.display = "none";
   }
-
 });
 
 document.getElementById("apt").addEventListener("click", function (event) {
@@ -246,9 +247,6 @@ document.getElementById("base").addEventListener("click", function (event) {
   homeImage.onload = resizeAreas;
 });
 
-
 window.addEventListener("resize", resizeAreas);
 
-window.onload = resizeAreas
-
-
+window.onload = resizeAreas;
