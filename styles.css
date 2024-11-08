@@ -108,13 +108,13 @@ area {
 
 .navButton {
   border: solid white 3px;
-  background-color: rgb(245, 184, 111);
+  background-color: rgb(250, 150, 29);
   color: white;
   transition: 0.3s;
 }
 
 .navButton:hover {
-  background-color: rgb(160, 121, 73);
+  background-color: rgb(168, 102, 22);
 }
 
 .navButton:active {
