@@ -37,6 +37,33 @@ a :hover {
   width: 100%;
 }
 
+.postContainer {
+  background-color: rgba(55, 73, 112, 0.74);
+  backdrop-filter: blur(10px);
+  color: white;
+  width: 100%;
+
+  p {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 1.2em;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.alignCenter
+{
+  text-align: center;
+  font-size: 1.2em;
+}
+
 .wrapper {
   width: 90%;
   max-width: 1200px;
@@ -189,4 +216,9 @@ a :hover {
 
 #lightbackground {
   background: url(UI/bg2.png);
+}
+
+#listAward {
+  margin-top: 5em;
+  margin-bottom: 10em;
 }
