@@ -42,6 +42,8 @@ a :hover {
   backdrop-filter: blur(10px);
   color: white;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
   p {
     margin-left: 15%;
@@ -174,6 +176,18 @@ a :hover {
   align-items: center;
 }
 
+.listAward {
+  margin-top: 5em;
+  margin-bottom: 6em;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+
+
 .postCard {
   padding: 10px;
   width: 80%;
@@ -184,6 +198,14 @@ a :hover {
   height: 10%;
   text-align: center;
   margin-top: 15%;
+}
+
+#listHonor {
+  margin-bottom: 6em;
+}
+
+#cath {
+  width: 20%;
 }
 
 #themebutton {
@@ -216,9 +238,4 @@ a :hover {
 
 #lightbackground {
   background: url(UI/bg2.png);
-}
-
-#listAward {
-  margin-top: 5em;
-  margin-bottom: 10em;
 }
