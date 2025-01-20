@@ -194,6 +194,12 @@ a :hover {
     margin-right: auto;
     margin-bottom: 3em;
     width: 85%;
+    border: solid white 2px;
+  }
+
+  hr {
+    width: 50%;
+    border: solid white 2px;
   }
 }
 

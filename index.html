@@ -1,66 +1,52 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Page</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<audio>
-    <source src ="UI/10. Collectopaedia Category Complete!.flac">
-</audio>
+  <audio>
+    <source src="UI/10. Collectopaedia Category Complete!.flac" />
+  </audio>
 
-<nav>
+  <nav>
     <button onclick="changeTheme()" id="themebutton">
-        <img src="UI/Untitled.png" alt="butt">
+      <img src="UI/Untitled.png" alt="butt" />
     </button>
 
     <div class="rowContainer">
-        <button class="navButton" onclick="window.location.href='home.html'">
-            <h2>Home</h2>
-        </button>
-    
-        <button class="navButton" onclick="window.location.href='main.html'">
-            <h2>Main</h2>
-        </button>
-    
-        <button class="navButton">
-            <h2>x</h2>
-        </button>
+      <button class="navButton" onclick="window.location.href='main.html'">
+        <h2>Main</h2>
+      </button>
     </div>
-</nav>
+  </nav>
 
-<body id ="darkbackground">
-
+  <body id="darkbackground">
     <div class="dragCard">
-        <button onclick="hideButton()">
-            <h2>x</h2>
-        </button>
+      <button onclick="hideButton()">
+        <h2>x</h2>
+      </button>
 
-        <img src="UI/chicken-walking.gif" alt="">
-
+      <img src="UI/chicken-walking.gif" alt="" />
     </div>
 
     <div class="container">
-    <div id = "darksquare">
-
+      <div id="darksquare">
         <h1>Ahoi!</h1>
 
-        <p>Ayo You GOTTA peep dis 
-            <br>
-             True?
+        <p>
+          Ayo You GOTTA peep dis
+          <br />
+          True?
         </p>
 
         <button onclick="showButton()" id="pagebutton">
-            <h2>Dive DEEP</h2>
+          <h2>Dive DEEP</h2>
         </button>
-
-    </div> 
-
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
