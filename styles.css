@@ -59,7 +59,6 @@ area {
 
 .dragCard {
   border: solid white 3px;
-  opacity: 0%;
   width: 20em;
   height: 10em;
   background-color: rgb(182, 102, 4);
@@ -67,7 +66,8 @@ area {
   position: fixed;
   cursor: grab;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  user-select: none;
 
   h2 {
     cursor: pointer;
@@ -80,9 +80,9 @@ area {
   }
 
   img {
-    align-self: center;
-    height: 5em;
-    width: 18em;
+    align-self: flex-end;
+    height: 30%;
+    width: 100%;
   }
 }
 
@@ -150,7 +150,7 @@ area {
 }
 
 #lightbackground {
-  background-color: rgb(236, 236, 236);
+  background: url(UI/bg2.png);
 }
 
 #darksquare {

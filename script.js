@@ -2,14 +2,44 @@ let newX = 0,
   newY,
   startX = 0,
   startY = 0;
+let activeCard = null;
 
-const movcard = document.getElementsByClassName("dragCard")[0];
+const movcards = document.getElementsByClassName("dragCard");
 
 const homeImage = document.getElementsByClassName("homePic")[0];
 
-if (movcard) {
-  movcard.addEventListener("mousedown", mouseDown);
+for (let card of movcards) {
+  card.addEventListener("mousedown", mouseDown);
 }
+
+// Moving Box //
+
+function mouseDown(e) {
+  activeCard = e.target;
+  startX = e.clientX;
+  startY = e.clientY;
+
+  document.addEventListener("mousemove", mouseMove);
+  document.addEventListener("mouseup", mouseUp);
+}
+
+function mouseMove(e) {
+  if (!activeCard) {return;}
+  newX = startX - e.clientX;
+  newY = startY - e.clientY;
+
+  startX = e.clientX;
+  startY = e.clientY;
+
+  activeCard.style.top = activeCard.offsetTop - newY + "px";
+  activeCard.style.left = activeCard.offsetLeft - newX + "px";
+}
+
+function mouseUp(e) {
+  document.removeEventListener("mousemove", mouseMove);
+  activeCard = null;
+}
+
 
 function resizeAreas() {
   const areas = document.querySelectorAll("area");
@@ -56,46 +86,7 @@ function changeTheme() {
   }
 }
 
-function showButton() {
-  const card = document.getElementsByClassName("dragCard")[0];
-
-  if (card) {
-    card.style.pointerEvents = "auto";
-    card.style.opacity = "1";
-  }
-}
-
-function hideButton() {
-  const card = document.getElementsByClassName("dragCard")[0];
-
-  if (card) {
-    card.style.pointerEvents = "none";
-    card.style.opacity = "0";
-  }
-}
-
-function mouseDown(e) {
-  startX = e.clientX;
-  startY = e.clientY;
-
-  document.addEventListener("mousemove", mouseMove);
-  document.addEventListener("mouseup", mouseUp);
-}
-
-function mouseMove(e) {
-  newX = startX - e.clientX;
-  newY = startY - e.clientY;
-
-  startX = e.clientX;
-  startY = e.clientY;
-
-  movcard.style.top = movcard.offsetTop - newY + "px";
-  movcard.style.left = movcard.offsetLeft - newX + "px";
-}
-
-function mouseUp(e) {
-  document.removeEventListener("mousemove", mouseMove);
-}
+// Housing //
 
 document.getElementById("bookMap").addEventListener("click", function (event) {
   event.preventDefault();
