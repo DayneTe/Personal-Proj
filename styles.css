@@ -59,10 +59,10 @@ area {
 
 .dragCard {
   border: solid white 3px;
-  width: 20em;
+  width: 10em;
   height: 10em;
-  background-color: rgb(182, 102, 4);
-  border-radius: 5%;
+  background-color: rgb(250, 150, 29, 1);
+  border-radius: 50%;
   position: fixed;
   cursor: grab;
   display: flex;
@@ -80,6 +80,7 @@ area {
   }
 
   img {
+    position: static;
     align-self: flex-end;
     height: 30%;
     width: 100%;
@@ -102,7 +103,7 @@ area {
 
 .imageContainer {
   position: relative;
-  max-width: 1300px; /* Matches the max-width of the image */
+  max-width: 1300px;
   width: 95%;
 }
 
@@ -119,6 +120,30 @@ area {
 
 .navButton:active {
   transform: translateY(3px);
+}
+
+#Dhe {
+  top: 70vh;
+  left: 45vw;
+}
+
+#Dme {
+  left: 15vw
+}
+
+#Dchicken {
+  left: 70vw;
+}
+
+#bubble {
+  position: absolute;
+  top: 1.5em;
+  left: 6.5em;
+  border-radius: 50%;
+  rotate: 35deg;
+  width: 1.5em;
+  height: 1em;
+  background-color: white;
 }
 
 #themebutton {
@@ -153,57 +178,40 @@ area {
   background: url(UI/bg2.png);
 }
 
-#darksquare {
-  border: solid white 2px;
-  transition: 1s;
-  border-radius: 5%;
-  width: 30em;
-  height: 20em;
-  background-color: rgb(250, 150, 29);
-  color: rgb(255, 255, 255);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  p {
-    font-size: 2em;
-  }
-}
-
-#lightsquare {
-  border: solid rgb(0, 0, 0) 2px;
-  transition: 1s;
-  border-radius: 5%;
-  width: 30em;
-  height: 20em;
-  background-color: rgb(255, 220, 167);
-  color: rgb(0, 0, 0);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  p {
-    font-size: 2em;
-  }
-}
-
-#pagebutton {
+#Lpagebutton {
   cursor: pointer;
-  border: solid white;
-  color: white;
-  background-color: rgb(245, 184, 111);
+  border: solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: rgb(84, 205, 241);
   width: 40%;
   height: 20%;
   transition: 0.2s;
 }
 
-#pagebutton:hover {
-  background-color: rgb(160, 121, 73);
+#Lpagebutton:hover {
+  background-color: rgb(57, 141, 167);
 }
 
-#pagebutton:active {
+#Lpagebutton:active {
+  transform: translateY(3px);
+}
+
+#Dpagebutton {
+  cursor: pointer;
+  border: solid white;
+  color: white;
+  background-color: rgb(250, 150, 29, 1);
+  width: 40%;
+  height: 20%;
+  transition: 0.2s;
+}
+
+#Dpagebutton:hover {
+  background-color: rgb(129, 74, 7);
+}
+
+#Dpagebutton:active {
   transform: translateY(3px);
 }
 

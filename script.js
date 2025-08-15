@@ -10,6 +10,7 @@ const homeImage = document.getElementsByClassName("homePic")[0];
 
 for (let card of movcards) {
   card.addEventListener("mousedown", mouseDown);
+  let collide = card.getBoundingClientRect();
 }
 
 // Moving Box //
@@ -41,6 +42,7 @@ function mouseUp(e) {
 }
 
 
+ // Resizing Areas //
 function resizeAreas() {
   const areas = document.querySelectorAll("area");
   const widthRatio = homeImage.offsetWidth / homeImage.naturalWidth;
@@ -57,6 +59,7 @@ function resizeAreas() {
   });
 }
 
+// Theme Change //
 function changeTheme() {
   audio = document.querySelector("audio");
   if (audio) {
@@ -65,27 +68,37 @@ function changeTheme() {
   }
 
   const currTheme = document.querySelector("#darkbackground") || document.querySelector("#lightbackground");
-  const currBox = document.querySelector("#darksquare") || document.querySelector("#lightsquare");
+    const currBut = document.querySelector("#Dpagebutton") || document.querySelector("#Lpagebutton");
+  const dragCards = document.getElementsByClassName("dragCard");
   const navButtons = document.getElementsByClassName("navButton");
 
-  // Check if the current theme is dark or light and toggle
   if (currTheme && currTheme.id === "darkbackground") {
     currTheme.id = "lightbackground";
-    currBox.id = "lightsquare";
+    currBut.id = "Lpagebutton";
 
     for (let navButton of navButtons) {
       navButton.style.border = "3px solid black";
     }
+
+    for (let dragCard of dragCards) {
+      dragCard.style.border = "3px solid black";
+      dragCard.style.backgroundColor = "rgba(84, 205, 241, 1)";
+    }
+
   } else if (currTheme && currTheme.id === "lightbackground") {
     currTheme.id = "darkbackground";
-    currBox.id = "darksquare";
+    currBut.id = "Dpagebutton";
 
     for (let navButton of navButtons) {
       navButton.style.border = "3px solid white";
     }
+
+    for (let dragCard of dragCards) {
+      dragCard.style.border = "3px solid white";
+      dragCard.style.backgroundColor = "rgba(250, 150, 29, 1)";
+    }
   }
 }
-
 // Housing //
 
 document.getElementById("bookMap").addEventListener("click", function (event) {
